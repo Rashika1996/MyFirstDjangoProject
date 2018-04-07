@@ -1,0 +1,18 @@
+<h1>Your text contains a total of {{ wordcount }} words and {{ uniquewords }} unique words</h1>
+
+<a href="{% url 'home' %}">Start again</a>
+
+<h1>Your Full Text: </h1>
+{{ fulltext }}
+<h1>Analysis:</h1>
+<h2>Total Words: {{ wordcount }}</h2>
+<h2>Unique Word Count: {{ uniquewords }}</h2>
+<h2>Words:</h2>
+{% for word,total in inorderlist %}
+
+{{ word }} - {{ total }}
+ <br>
+
+{% endfor %}
+
+
